@@ -23,8 +23,14 @@ li {
 
 #contactus {
     padding: 5px;
-    border: .5px solid grey;
+    border: .5px solid lightgrey;
     border-radius: 5px;
+}
+
+#contactus:hover {
+    cursor: pointer;
+    color: white;
+    background-color: orange;
 }
 
 section {
@@ -68,7 +74,7 @@ ul.section {
 
 }
 
-ul.section li.orangeButton {
+.orangeButton {
     padding: 10px 20px 10px 20px;
     
     background-color: orange;
@@ -76,10 +82,17 @@ ul.section li.orangeButton {
     border-radius: 4px;
 }
 
-
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.orangeButton:hover {
+    cursor: pointer;
+    color: orange;
+    background-color: white;
+    border: .25px  orange;
+    border-style: dashed;
 }
 
 .logo {
