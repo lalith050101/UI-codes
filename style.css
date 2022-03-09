@@ -100,11 +100,21 @@ a {
     width:75px;
 }
 
-#code {
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer a {
     padding: 10px 20px 10px 20px;
     background-color: #c94848;
     color: white;
-    border: 1px solid black;
-    border-radius: 4px;
+    border: 2px dashed black;
+    border-radius: 1vh;
 }
 
