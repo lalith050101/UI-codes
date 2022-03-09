@@ -1,7 +1,125 @@
-.card {
-    width: 60vh;
-    height: 60vh;
-    margin: 20vh auto;
-    background-color: rgb(248,228,145);
+body {
+    margin: 0;
+}
 
+section {
+    width: 100vw;
+    height: 100vh;
+
+}
+.hand-container {
+    width: 80vh;
+    height: 80vh;
+    margin: 5% auto;
+    background-color: rgb(248,228,145);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.top {
+    display: flex;
+    width: 60%;
+    height: 40%;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+.finger {
+    background-color: black;
+    width: 4vw;
+    border-radius: 2vw; 
+}
+
+#finger1 {
+    height: 20vh; 
+}
+
+#finger2 {
+    height: 25vh; 
+}
+
+#finger3 {
+    height: 20vh; 
+}
+
+#finger4 {
+    height: 15vh; 
+}
+
+
+.thumb-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;    
+}
+
+.thumb-wrapper {
+    width: 6vw;
+    height: 35vh;
+    border-radius: 3vw; 
+    background-color: rgb(248,228,145);
+     
+    transform: rotateY(0deg) rotate(60deg) translateX(27vw) translateY(-60vh);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 1;
+}
+
+
+#finger5 {
+    height: 30vh; 
+    z-index: 1;
+}
+
+
+
+.bottom {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bottom .first, .bottom .second {
+    background-color: black;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+.bottom .first {
+    width: 100%;
+    height: 50%;
+}
+
+.bottom .second {
+    width: 50%;
+    height: 40%;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+a {
+    padding: 10px 20px 10px 20px;
+    background-color: #c94848;
+    color: white;
+    border: 2px dashed black;
+    border-radius: 1vh;
 }
