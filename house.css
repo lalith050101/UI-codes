@@ -1,6 +1,51 @@
 .card {
-    width: 60vh;
-    height: 60vh;
-    margin: 20vh auto;
+    width: 40vw;
+    height: 40vw;
+    margin: 10vh auto;
     background-color: rgb(102,146,207);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.roof {
+    width: 0;
+    height: 0;
+    border-bottom: 15vw solid rgb(36,61,131);
+    border-left: 15vw solid transparent;
+    border-right: 15vw solid transparent; 
+
+	/* border-bottom: 50px solid #555; */
+}
+
+.base {
+    width: 60%;
+    height: 50%;
+    background-color: rgb(36,61,131);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.base .top {
+    width: 60%;
+    height: 7%;
+    border-radius: 1vw;
+    background-color: rgb(239,184,79);
+}
+
+.base .bottom {
+    width: 30%;
+    height: 40%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    background-color: rgb(239,184,79);
+}
+
+
