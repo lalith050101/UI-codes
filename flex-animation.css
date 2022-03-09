@@ -1,0 +1,173 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex-wrap {
+    border: 1px solid white;
+    margin: 5% auto;
+    /* background-color: gray; */
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.vertical-flex {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.card {
+    width: 15vw;
+    height: 45%;
+    border-radius: 5%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.inner-card {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(29,32,75);
+    border-radius: 5%;
+    transition: all 1s ease-out;
+}
+
+.inner-card:hover {
+    height: 85%;   
+}
+
+.main-card {
+    width: 15vw;
+    height: 100%;
+    border-radius: 5%;
+    background-color: rgb(29,32,75);
+}
+
+.main-card .inner-card {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(87,71,234);
+    border-radius: 5%;
+    transition: all 1s ease-out;
+}
+
+.main-card .inner-card:hover {
+    height: 80%;    
+}
+
+.circle-div {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.circle {
+    z-index: -1;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#circle1 {
+    background-color: red;
+    animation: bouncer-1 5s ease-in-out 0s infinite alternate;
+}
+
+#circle2 {
+    background-color: orange;
+    animation: bouncer-1 5s ease-out 0s infinite;
+}
+
+#circle3 {
+    background-color: skyblue;
+    animation: bouncer-2 5s ease-in-out 0s infinite alternate;
+}
+
+#circle4 {
+    background-color: pink;
+    animation: bouncer-2 5s ease-out 0s infinite;
+}
+
+@keyframes bouncer-1 {
+    0% {
+        transform: translateY(50vh);
+    }
+    25% {
+        transform: translateX(33vw) translateY(85vh);
+    }
+    50% {
+        transform: translateX(97vw) translateY(50vh);
+    }
+
+    75% {
+        transform: translateX(50vw) translateY(0vh);
+    }
+    
+    100% {
+        transform: translateY(50vh);
+    }
+}
+
+@keyframes bouncer-2 {
+    0% {
+        transform: translateX(50vh);
+    }
+    25% {
+        transform: translateY(33vw) translateX(85vh);
+    }
+    50% {
+        transform: translateY(97vw) translateX(50vh);
+    }
+
+    75% {
+        transform: translateY(50vw) translateX(0vh);
+    }
+    
+    100% {
+        transform: translateX(50vh);
+    }
+}
+
+
+
+
+.orange {
+    background-color: rgb(255,140,100);
+}
+
+.skyblue {
+    background-color: rgb(85,195,230);
+}
+
+.pink {
+    background-color: rgb(255,94,125);
+}
+
+.green {
+    background-color: rgb(77,208,129);
+}
+
+.violet {
+    background-color: rgb(114,53,209);
+}
+
+.yellow {
+    background-color: rgb(240,200,88);
+}
+
+
