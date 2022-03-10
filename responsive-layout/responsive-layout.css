@@ -1,0 +1,226 @@
+body {
+    background-color: rgb(8,25,69);
+    width: 100%;
+}
+
+div {
+    color: white;
+}
+
+
+nav {
+    height: 10vh;
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 10%;
+    display: flex;
+    align-items:center ;
+}
+
+.logo div {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.menu {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.account {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav .nav-btn {
+    display: none;
+}
+
+.button {
+    text-decoration: none;
+    padding: 1vh 3vh;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+}
+
+
+#login a, #howitworks a {
+    color: rgb(1,228,217);
+    border: .5px solid rgb(1,228,217);
+    border-radius: 5px;
+}
+
+#signup a, #getstarted a {
+    color: rgb(8,25,69);
+    background-color: rgb(1,228,217);
+    border-radius: 5px;
+}
+
+
+section {
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-around;
+}
+
+
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.horizontal-flex {
+    display: flex;
+}
+
+.vertical-flex div {
+    margin: .5rem;
+}
+
+.text1 {
+    width: 60%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.text2 {
+    width: 55%;
+    color: white;
+    font-size: large;
+    letter-spacing: 1px;
+    word-spacing: .3vw;
+}
+
+.main-image img {
+    width: 40vw;
+}
+
+.size-warning {
+    display: none;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer a {
+    padding: 10px 20px 10px 20px;
+    background-color: #c94848;
+    color: white;
+    border: 2px dashed black;
+    border-radius: 1vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        text-align: center;
+    }
+   
+    .menu, .account {
+        display: none;
+    }
+
+    nav {
+        margin-bottom: 5%;
+        justify-content: space-between;
+    }
+
+    nav .nav-btn {
+        display: block;
+    }
+    nav .nav-btn label span {
+        display: block;
+        width: 6vw;
+        height: 2vw;
+        border-top: .7vw solid white;
+    }
+
+    section {
+        margin: 5%;
+        flex-direction: column;
+    }
+
+
+    .text1 {
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;
+        font-size: 10vw;
+    }
+    
+    .text2 {
+        width: 100%;
+        color: white;
+        font-size: 4vw;
+        letter-spacing: 1px;
+        word-spacing: .3vw;
+    }
+
+    
+    .main-image img {
+        width: 80vw;
+        height: 50vw;;
+    }
+
+    .vertical-flex .horizontal-flex {
+        flex-direction: column;
+    }
+
+    .vertical-flex .vertical-flex {
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 1vh;
+        right: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    
+    footer a {
+        font-size: x-small;
+        padding: 1vw 2vw;
+        background-color: #c94848;
+        color: white;
+        border: 2px dashed black;
+        border-radius: 1vh;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 220px) {
+
+    nav, section.main, footer {
+        display: none;
+    }
+
+    .size-warning {
+        color: white;
+    }
+}
