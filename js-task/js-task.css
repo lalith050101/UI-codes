@@ -4,7 +4,7 @@
     font-size: x-large;
 }
 section {
-    margin: 30vh 0;
+    margin: 10vh 0;
     display: flex;
     justify-content: center;
 
@@ -31,6 +31,10 @@ input, select {
     box-sizing: border-box;
 }
 
+input[type=submit] {
+    background-color: #c94848;
+}
+
 #result-div {
       color: aqua;
       margin: 5vh 0;
@@ -51,3 +55,4 @@ footer a {
     border: 2px dashed black;
     border-radius: 1vh;
 }
+
