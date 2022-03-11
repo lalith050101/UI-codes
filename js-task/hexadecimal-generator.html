@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Hexadecimal Code</title>
+    <link rel="stylesheet" href="hexadecimal-generator.css">
+
+</head>
+
+<body>        
+        <section>
+            <div class="flex-wrap">
+                <div class="vertical-flex">
+                    <div id="hexcode" class="vertical-flex">
+                        <div> Select card with Hexa code: </div>
+                        <div id="code"></div>
+                    </div>
+        
+                    <div id="refresh">
+                        <button class="orangeButton" onclick="refreshCodes()" >Refresh Colors</button>
+                    </div>
+                </div>
+                <div class="vertical-flex">
+                    <div id="card1" class="card"></div>
+                    <div  id="card2" class="card"></div>
+                </div>
+
+                <div class="vertical-flex">
+                    <div id="card3" class="card"></div>
+                    <div id="card4" class="card"></div>
+                </div>
+
+                <div class="vertical-flex">
+                    <div id="card5" class="card"></div>
+                    <div id="card6" class="card"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a class="code-link" target="blank" href="https://github.com/lalith050101/UI-codes/blob/main/js-task/hexadecimal-generator.html">HTML Code</a>
+            <a class="code-link" target="blank" href="https://github.com/lalith050101/UI-codes/blob/main/js-task/hexadecimal-generator.css">CSS Code</a>
+        </footer>
+
+
+        <script>
+
+            var hexcode = document.getElementById('code');
+            var cards = document.getElementsByClassName("card");
+            var generatedHexCode;
+            var arr;
+            var answered=false;
+
+            refreshCodes();
+
+            for (var i = 0; i < 6; i++) {
+                cards[i].addEventListener('click', checkCode);
+            }
+
+            function refreshCodes() {
+                answered=false;
+                generatedHexCode = getHexadecimalCode();
+                hexcode.innerHTML = generatedHexCode;
+
+                arr = [1,2,3,4,5,6].map(getHexadecimalCode);
+                arr[Math.floor(Math.random() * 6)] = [generatedHexCode];
+
+                for(var i=0; i<6; i++){
+                    changeBackgroundColor(i, arr[i]);
+                }
+
+                function changeBackgroundColor(ind, value) {
+                    cards[ind].style.backgroundColor = value;
+                    cards[ind].innerHTML = "";
+                }
+
+                function getHexadecimalCode() {
+                var letters = "0123456789ABCDEF";
+                // html color code starts with #
+                var color = '#';
+                // generating 6 times
+                for (var i = 0; i < 6; i++)
+                    color += letters[(Math.floor(Math.random() * 16))];
+
+                return color;
+                }
+            }
+
+            function checkCode(e) {
+                console.log(generatedHexCode + " " + e.target.id.slice(4) + arr);
+                if(generatedHexCode == arr[e.target.id.slice(4)-1]){
+                    this.style.backgroundColor = 'white';
+                    this.innerHTML = '<p style="background-color:inherit; color:green;">Correct</p>';
+                    answered = true;
+                }
+                else if(!answered) {
+                    this.style.backgroundColor = 'black';
+                }
+            }           
+        </script>
+</body>
+
+</html>
