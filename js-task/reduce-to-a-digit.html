@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce to a Digit</title>
+    <link rel="stylesheet" href="js-task.css">
+</head>
+   
+    <section>
+        <form action="javascript:compute()">
+        <div>
+            
+            <div>
+                <label for="size">Number</label>
+                <input type="number" min="0" name="size" id="num" required>
+            </div>
+            
+                <input type="submit" value="Reduce" >
+            </div>
+            <div id="result-div">Result:
+                <div id="result"></div>
+            </div>
+        </div>
+        </form>
+    </section>
+        
+    <footer>
+        <a class="code-link" target="blank" href="https://github.com/lalith050101/UI-codes/blob/main/js-task/reduce-to-a-digit.html">HTML Code</a>
+        <a class="code-link" target="blank" href="https://github.com/lalith050101/UI-codes/blob/main/js-task/js-task.css">CSS Code</a>
+
+    </footer>
+    
+
+
+    <script>
+        function compute() {
+            let num = document.getElementById('num').value;
+            let sumVal = 0;
+            // alert(num/10);
+            while(num) {
+                sumVal += factorial(num%10);
+                num = Math.floor(num/10);
+            }
+            document.getElementById("result").innerHTML = `${reduce(sumVal)}`;
+            
+        }
+
+        function factorial(n) {
+            if(n == 0)
+                return 1;
+            return n * factorial(n-1);
+        }
+
+        function reduce(n) {
+            sumOfDigits = 0;
+            while(n) {
+                sumOfDigits += n%10;
+                n = Math.floor(n/10);
+            }
+            if(sumOfDigits < 10)
+                return sumOfDigits;
+
+            return reduce(sumOfDigits);
+        }
+
+    </script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Consecutive Numbers forms given sum</title>
+    <link rel="stylesheet" href="js-task.css">
+</head>
+   
+    <section>
+        <form action="javascript:myfn()">
+        <div>
+            
+            <div>
+                <label for="size">Array size</label>
+                <input type="number" min="0" name="size" id="n" required>
+            </div>
+
+            <div>
+                <label for="elements">Array elements</label>
+                <!-- <textarea name="elements" id="elements" pattern="[0-9]" cols="30" rows="10" required></textarea> -->
+                <input type="text" name="elements" id="elements" pattern="[- +()0-9]+" required>
+            </div>
+            
+            <div>
+                <label for="sum">Expected sum</label>
+                <input type="number" name="sum" id="sum" required >
+            </div>
+            
+            <div>
+                <input type="submit" value="Check" >
+            </div>
+            
+
+            <div id="result-div">Result:
+                <div id="result"></div>
+            </div>
+        </div>
+        </form>
+    </section>
+        
+    <footer>
+        <a class="code-link" target="blank" href="https://github.com/lalith050101/UI-codes/blob/main/js-task/find-consecutive.html">HTML Code</a>
+        <a class="code-link" target="blank" href="https://github.com/lalith050101/UI-codes/blob/main/js-task/js-task.css">CSS Code</a>
+
+    </footer>
+    
+    <script>
+        function myfn() {
+            let size = document.getElementById('n').value;
+            let arr = document.getElementById('elements').value.split(" ").map(Number);
+            let sum = document.getElementById('sum').value;
+
+            for(let ind=0; ind<arr.length-1; ind++){
+                if(arr[ind] + arr[ind+1] == sum){
+                    document.getElementById("result").innerHTML = `Sum found at index ${ind+1}`;
+                    return;
+                }
+            }
+            document.getElementById("result").innerHTML = `Sum not found`;
+            
+        }
+    </script>
+<body>
+    
+</body>
+</html>
