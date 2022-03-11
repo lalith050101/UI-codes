@@ -1,0 +1,116 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.circle-div {
+    
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.circle-div > div {
+    height: 100%;
+    width: 100%;
+}
+
+.circle {    
+    border-radius: 10px;
+}
+
+#circle1 {
+    z-index: -1;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    animation: bouncer-1 7s ease-in-out 0s infinite ;
+}
+
+#circle2 {
+    z-index: -2;
+    background-color: yellow;
+    width: 20px;
+    height: 20px;
+    animation: bouncer-1 7s ease-in-out 0.5s infinite ;
+}
+
+#circle3 {
+    z-index: -3;
+    background-color: skyblue;
+    width: 20px;
+    height: 20px;
+    animation: bouncer-1 7s ease-in-out 0.8s infinite ;
+}
+
+#circle4 {
+    z-index: -4;
+    background-color: lightpink;
+    width: 20px;
+    height: 20px;
+    animation: bouncer-1 7s ease-in-out 1.2s infinite ;
+}
+
+
+
+@keyframes bouncer-1 {
+    0% {
+        transform: translateX(0) translateY(calc(50vh - 20px));
+    }
+    25% {
+        transform: translateX(calc(50vw - 20px)) translateY(calc(100vh - 20px));
+    }
+    50% {
+        transform: translateX(calc(100vw - 20px)) translateY(calc(50vh - 20px));
+    }
+
+    75% {
+        transform: translateX(calc(50vw - 20px)) translateY(0);
+    }
+    
+    100% {
+        transform: translateX(0) translateY(calc(50vh - 20px));
+    }
+}
+
+@keyframes bouncer-2 {
+    0% {
+        transform: translateY(0vh);
+    }
+    25% {
+        transform: translateX(0) translateY(calc(100vh - 20px));
+    }
+    50% {
+        transform: translateX(calc(100vw - 20px)) translateY(calc(100vh - 20px));
+    }
+
+    75% {
+        transform: translateX(calc(100vw - 20px)) translateY(0);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer a {
+    padding: 10px 20px 10px 20px;
+    background-color: #c94848;
+    color: white;
+    border: 2px dashed black;
+    border-radius: 1vh;
+}
