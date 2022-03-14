@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(245,247,249);
+
+}
+
+h1 {
+    color: darkblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#hexcode {
+    height: 10vh;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+#code {
+    color: skyblue;
+}
+
+.flex-wrap {
+    margin: 0% auto;
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+
+}
+
+.card {
+    padding: 0 1vw;
+    background-color: white;
+    width: 15vw;
+    height: 25%;
+    border-radius: 2%;
+    border-top: 1vw solid red;
+    border-color: red;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.card:hover {
+    width: 15vw;
+    height: 30%;
+    cursor: pointer;
+} 
+
+
+.card > .category {
+     width: max-content;
+     padding: .25vw;
+     text-align: center;
+}
+
+.card > .status {
+    width: 1.6vw;
+    height: 1.6vw;
+    border-radius: .8vw;
+    text-align: center;
+}
+
+.orangeButton {
+    padding: 10px 20px 10px 20px;
+    background-color: orange;
+    color: white;
+    border-radius: 4px;
+    border-color: white;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer a {
+    padding: 10px 20px 10px 20px;
+    background-color: #c94848;
+    text-decoration: none;
+    color: white;
+    border: 2px dashed black;
+    border-radius: 1vh;
+}
