@@ -31,3 +31,10 @@
 
 ## Display data from JavaScript Object
   Demo [click here](https://lalith050101.github.io/UI-codes/js-task/display-js-obj-data)
+  
+## First Angular App with Toastr Package
+  Demo [click here](https://myfirstangapp-yvlk.netlify.app/)
+ 
+ 
+ 
+ 
