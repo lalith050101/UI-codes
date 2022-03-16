@@ -55,6 +55,13 @@ export class AppComponent {
     
   }
 
+  onRemovetodoItem(id: Number) {
+    let itemIndex = this.todos.findIndex(todoItem => todoItem.id === id);
+    delete this.todos[itemIndex];
+    console.log("remove todo item in parent");
+    
+  }
+
 
   showSuccess() {
     // error, success, warning, info

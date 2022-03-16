@@ -12,11 +12,18 @@ export class TodoComponent implements OnInit {
   
   @Input() todoItem: todo;
   @Output() statusChanged = new EventEmitter<Number>();
+  @Output() removedtodoItem = new EventEmitter<Number>();
   constructor() { }
 
   changeStatus(id: Number) {
     this.statusChanged.emit(id);
     console.log("change todo status");
+    
+  }
+
+  removetodoItem(id: Number) {
+    this.removedtodoItem.emit(id);
+    console.log("remove todo item");
     
   }
 
