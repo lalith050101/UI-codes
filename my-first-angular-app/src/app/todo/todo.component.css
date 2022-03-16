@@ -1,0 +1,17 @@
+.pending,.completed {
+    width: 20vw;
+    /* height: vh; */
+    border-radius: 5%;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+
+}
+.pending {
+    background-color: gray;
+}
+
+.completed {
+    background-color: green;
+}
