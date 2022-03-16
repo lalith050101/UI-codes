@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 export enum todoStatus {
-  Pending, Completed
+  Pending='Pending', 
+  Completed='Completed'
 }
 
 export interface todo {
@@ -21,6 +22,7 @@ export class AppComponent {
   id: number = 1;
   description: string; 
   todos : todo[] = [];
+  status = todoStatus;
 
   constructor(private toastr: ToastrService) {  }
 

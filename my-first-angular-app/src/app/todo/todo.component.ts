@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { todo } from '../app.component';
+import { todo, todoStatus } from '../app.component';
 
 @Component({
   selector: 'app-todo',
@@ -8,6 +8,8 @@ import { todo } from '../app.component';
 })
 export class TodoComponent implements OnInit {
 
+  status = todoStatus;
+  
   @Input() todoItem: todo;
   @Output() statusChanged = new EventEmitter<Number>();
   constructor() { }

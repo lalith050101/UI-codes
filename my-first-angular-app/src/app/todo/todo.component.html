@@ -1,4 +1,4 @@
-<div [ngClass]="{'pending': todoItem.status === 0, 'completed':  todoItem.status === 1}" 
+<div [ngClass]="{'pending': todoItem.status === status.Pending, 'completed':  todoItem.status === status.Completed}" 
     (click)="changeStatus(todoItem.id)">
     <div >{{todoItem.description}}</div>
     <div>{{todoItem.id}}</div> 

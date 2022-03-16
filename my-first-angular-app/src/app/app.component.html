@@ -4,9 +4,15 @@
   </div>
 
   <div *ngFor="let todo of todos; index as i">
+    <div *ngIf="todo.status===status.Pending">
     <app-todo [todoItem]="todo" (statusChanged)="onStatusChange($event)"></app-todo>
-      
+    </div>
   </div>
-
+  <hr>
+  <div *ngFor="let todo of todos; index as i">
+    <div *ngIf="todo.status===status.Completed">
+    <app-todo [todoItem]="todo" (statusChanged)="onStatusChange($event)"></app-todo>
+    </div>
+  </div>
 
 <router-outlet></router-outlet>
