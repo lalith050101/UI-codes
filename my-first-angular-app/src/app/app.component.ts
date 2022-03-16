@@ -1,16 +1,7 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-
-export enum todoStatus {
-  Pending='Pending', 
-  Completed='Completed'
-}
-
-export interface todo {
-  id: Number;
-  description: string;
-  status: todoStatus;
-}
+import { Observable } from 'rxjs';
+import { todo, TodoService, todoStatus } from './services/todo.service';
 
 @Component({
   selector: 'app-root',
@@ -19,53 +10,38 @@ export interface todo {
 })
 
 export class AppComponent {
-  id: number = 1;
   description: string; 
-  todos : todo[] = [];
   status = todoStatus;
 
-  constructor(private toastr: ToastrService) {  }
+  todos: todo[];
 
-  addTODO() {
-    let todoObj = {} as todo;
-    todoObj.id = this.id;
-    this.id += 1;
-    todoObj.description = this.description;
-    todoObj.status = todoStatus.Pending;
-    this.todos.push(todoObj);
-    this.showSuccess();
+  constructor(private toastr: ToastrService, private todoService: TodoService) {  
+    this.todoService.todos$.subscribe(todos => this.todos = todos);
   }
 
-
-  descriptionChanged() {
-
+  addTODO() {
+    this.todoService.addTODO(this.description);    
+    this.showSuccess("Added new TODO item...", "Add TODO");
   }
 
   onRemovetodoItem(id: Number) {
-    let itemIndex = this.todos.findIndex(todoItem => todoItem.id === id);
-    this.todos.splice(itemIndex,1);
+    this.todoService.removeTODO(id); 
+    this.showWarning("Removed TODO item...", "Remove TODO");
     console.log("remove todo item in parent");
     
   }
 
   onStatusChange(id: Number) {
-    let itemIndex = this.todos.findIndex(todoItem => todoItem.id === id);
-    if(this.todos[itemIndex].status === todoStatus.Completed){
-      this.todos[itemIndex].status = todoStatus.Pending;
-      this.showPending();
-    }
-    else{
-      this.todos[itemIndex].status = todoStatus.Completed;
-      this.showCompleted();
-    }
+    this.todoService.changeStatus(id); 
+    this.showSuccess("TODO Status changed...", "Change Status");
     console.log("change todo status in parent");
     
   }
 
-  showSuccess() {
+  showSuccess(message: string, title: string) {
     // error, success, warning, info
-    this.toastr.success("Added TODO Item...", "Add TODO", {
-      timeOut: 5000
+    this.toastr.success(message, title, {
+      timeOut: 2000
     });
   }
 
@@ -74,9 +50,8 @@ export class AppComponent {
     });
   }
 
-  showWarning() {
-    this.toastr.warning("Warning ...", "Warning", {
-    });
+  showWarning(message: string, title: string) {
+    this.toastr.warning(message, title);
   }
 
   showPending() {

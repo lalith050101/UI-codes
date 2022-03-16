@@ -8,3 +8,7 @@
     margin: 1vw;
     background-color: white;
 }
+
+.pending, .completed:hover {
+    cursor: pointer;
+}

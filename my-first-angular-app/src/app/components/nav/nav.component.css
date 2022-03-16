@@ -1,0 +1,19 @@
+nav {
+    background-color: rgb(51, 50, 50);
+}
+.container {
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pending {
+    color: rgb(221, 219, 219);
+}
+.completed {
+    color: rgb(202, 235, 202);
+}
