@@ -9,7 +9,7 @@
         <div id="pending">TO DO</div>
         <div *ngFor="let todo of todos; index as i" >
           <div *ngIf="todo.status===status.Pending">
-          <app-todo [todoItem]="todo" (removedtodoItem)="onRemovetodoItem($event)" (statusChanged)="onStatusChange($event)" ></app-todo>
+          <app-todo [todoItem]="todo" (removedtodoItem)="onRemovetodoItem($event)"  (statusChanged)="onStatusChange($event)" ></app-todo>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
         <div id="completed">DONE</div>
         <div *ngFor="let todo of todos; index as i" >
           <div *ngIf="todo.status===status.Completed">
-          <app-todo [todoItem]="todo" (statusChanged)="onStatusChange($event)"></app-todo>
+          <app-todo [todoItem]="todo" (removedtodoItem)="onRemovetodoItem($event)"  (statusChanged)="onStatusChange($event)"></app-todo>
           </div>
         </div>
       </div>

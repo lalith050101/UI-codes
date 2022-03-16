@@ -41,6 +41,13 @@ export class AppComponent {
 
   }
 
+  onRemovetodoItem(id: Number) {
+    let itemIndex = this.todos.findIndex(todoItem => todoItem.id === id);
+    this.todos.splice(itemIndex,1);
+    console.log("remove todo item in parent");
+    
+  }
+
   onStatusChange(id: Number) {
     let itemIndex = this.todos.findIndex(todoItem => todoItem.id === id);
     if(this.todos[itemIndex].status === todoStatus.Completed){
@@ -54,14 +61,6 @@ export class AppComponent {
     console.log("change todo status in parent");
     
   }
-
-  onRemovetodoItem(id: Number) {
-    let itemIndex = this.todos.findIndex(todoItem => todoItem.id === id);
-    delete this.todos[itemIndex];
-    console.log("remove todo item in parent");
-    
-  }
-
 
   showSuccess() {
     // error, success, warning, info

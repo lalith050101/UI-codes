@@ -1,6 +1,7 @@
-.pending,.completed {
+.pending, .completed {
     padding: 5px;
     display: flex;
+    justify-content: space-between;
    /* height: max-content; */
     /* overflow-y: scroll; */
     width: 80%;

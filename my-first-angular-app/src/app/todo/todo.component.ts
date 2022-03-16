@@ -17,14 +17,13 @@ export class TodoComponent implements OnInit {
 
   changeStatus(id: Number) {
     this.statusChanged.emit(id);
-    console.log("change todo status");
+    console.log("change todo status child");
     
   }
 
   removetodoItem(id: Number) {
     this.removedtodoItem.emit(id);
-    console.log("remove todo item");
-    
+    console.log("remove todo item child");
   }
 
   ngOnInit(): void {
