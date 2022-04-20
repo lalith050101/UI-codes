@@ -35,7 +35,7 @@
 ## Day 6-8
 ## First Angular App with Toastr Package 
 ## TODO APP using RxJS
-  Demo [click here](https://myfirstangapp-yvlk.netlify.app/)
+
  
  
  
