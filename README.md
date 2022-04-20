@@ -31,8 +31,10 @@
 
 ## Display data from JavaScript Object
   Demo [click here](https://lalith050101.github.io/UI-codes/js-task/display-js-obj-data)
-  
-## First Angular App with Toastr Package
+ 
+## Day 6-8
+## First Angular App with Toastr Package 
+## TODO APP using RxJS
   Demo [click here](https://myfirstangapp-yvlk.netlify.app/)
  
  
