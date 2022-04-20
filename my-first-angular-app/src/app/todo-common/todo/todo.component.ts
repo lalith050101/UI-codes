@@ -11,19 +11,16 @@ export class TodoComponent implements OnInit {
   status = todoStatus;
   
   @Input() todoItem: todo;
-  @Output() statusChanged = new EventEmitter<Number>();
-  @Output() removedtodoItem = new EventEmitter<Number>();
+  @Output() statusChanged = new EventEmitter<string>();
+  @Output() removedtodoItem = new EventEmitter<string>();
   constructor() { }
 
-  changeStatus(id: Number) {
-    this.statusChanged.emit(id);
-    console.log("change todo status child");
-    
+  changeStatus(id: string) {
+    this.statusChanged.emit(id);    
   }
 
-  removetodoItem(id: Number) {
+  removetodoItem(id: string) {   
     this.removedtodoItem.emit(id);
-    console.log("remove todo item child");
   }
 
   ngOnInit(): void {

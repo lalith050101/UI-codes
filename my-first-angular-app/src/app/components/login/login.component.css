@@ -1,0 +1,33 @@
+.container {
+    /* background-color: white; */
+    border: .1px solid gray;
+    padding: 2vw;
+    margin: 10vh auto;
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+h1 {
+    /* color: lightpink; */
+    text-align: center;
+}
+
+input {
+    border: .1px solid gray;
+    padding: 1vw;
+}
+
+button {
+    margin: 0 auto;
+    /* padding: 1vw; */
+    width: 5vw;
+    font-size: large;
+}
+
+label {
+    font-size: large;
+}

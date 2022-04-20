@@ -1,0 +1,10 @@
+.topdiv {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2vw;
+}
+.topdiv > button {
+    margin: 0 2vw;
+    font-size: larger;
+}

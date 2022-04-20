@@ -1,0 +1,24 @@
+<nav>
+    <div class="container">
+        <div>
+            <a class="nav-item" [routerLink]="['todos']" > ToDos </a>
+        </div>
+        <div><a class="nav-item" [routerLink]="['todos']" >
+            <i class="fa-solid fa-clipboard-list fa-lg"></i> </a> {{todosLength}}</div>
+        <div class="pending">
+            <i class="fa-solid fa-hourglass fa-lg"></i> {{todosLength - completed}}</div>
+        <div class="completed">
+            <i class="fa-solid fa-check fa-lg"></i> {{completed}}</div>
+        <div class="dropdown">
+            <button class="dropbtn">Category 
+                <i class="fa fa-caret-down fa-lg"></i>
+            </button>     
+            <div class="dropdown-content">
+                <a [routerLink]="['category', 'personal']" >Personal</a>
+                <a [routerLink]="['category', 'work']">Work</a>
+                <a [routerLink]="['category', 'college']">College</a>
+                <a [routerLink]="['category', 'trip']">Trip</a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,11 @@
+<div class="topdiv">
+    <input [(ngModel)]="title"  type="text" placeholder="Enter TODO title">
+    <input [(ngModel)]="description"  type="text" placeholder="Enter TODO description">
+    <select [(ngModel)]="category" name="category" id="category" >
+      <option value="work">Work</option>
+      <option value="personal" selected>Personal</option>
+      <option value="college" >College</option>
+      <option value="trip" >Trip</option>
+    </select>
+    <button (click)="addTODO()">+</button>
+</div>

@@ -1,5 +1,0 @@
-<div [ngClass]="{'pending': todoItem.status === status.Pending, 'completed':  todoItem.status === status.Completed}" 
-    (click)="changeStatus(todoItem.id)">
-    {{todoItem.description}}
-        <button (click)="removetodoItem(todoItem.id)">Delete</button>
-</div>

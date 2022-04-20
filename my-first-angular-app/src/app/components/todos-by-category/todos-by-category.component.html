@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div class="container">
+  
+    <div class="todos">
+      <div class="pending">
+        <div id="pending">Pending TODOs</div>
+        <div *ngFor="let todo of todos; index as i" >
+          <div *ngIf="todo.status===status.Pending && todo.category===category">
+          <app-todo [todoItem]="todo" (removedtodoItem)="onRemovetodoItem($event)"  (statusChanged)="onStatusChange($event)" ></app-todo>
+          </div>
+        </div>
+      </div>
+   
+      <div class="completed">
+        <div id="completed">Completed TODOs</div>
+        <div *ngFor="let todo of todos; index as i" >
+          <div *ngIf="todo.status===status.Completed && todo.category===category">
+          <app-todo [todoItem]="todo" (removedtodoItem)="onRemovetodoItem($event)"  (statusChanged)="onStatusChange($event)"></app-todo>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  
+  

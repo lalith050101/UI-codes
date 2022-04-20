@@ -1,0 +1,13 @@
+<div class="container" >
+    <div (click)="changeStatus(todoItem.id)" class="todoDetails">
+        <div>{{todoItem.title | titlecase}}</div>
+        <div>{{todoItem.createdDateTime | date}}</div>
+    </div>
+    
+    <a [routerLink]="['/todo', todoItem.id.toString()]" >
+        <i class="fa-solid fa-square-up-right fa-lg" style="color: black;"></i>
+    </a>
+    <button (click)="removetodoItem(todoItem.id)">
+        <i class="fa-solid fa-trash fa-lg"></i>
+    </button>
+</div>

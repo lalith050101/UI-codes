@@ -1,0 +1,21 @@
+.container {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.todoDetails {
+    width: 80%;
+}
+
+button {
+    background: none;
+    border: none;
+}
